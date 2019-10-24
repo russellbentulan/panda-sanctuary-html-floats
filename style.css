@@ -5,7 +5,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+.visually-hidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 /* VARIABLES */
 :root {
@@ -16,9 +16,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
     --base-font-size: 2rem;
     --heading-font-size: 4.2rem;
-    --barlow: 'Barlow', sans-serif;
-    --offside: 'Offside', cursive;
 
+    --font-body: 'Barlow', sans-serif;
+    --font-heading: 'Offside', cursive;
+
+    --grid-width: 114rem;
     --grid-gutter: 3rem;
 }
 
@@ -32,17 +34,23 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-size: inherit;
+li {
+    list-style: none;
+    padding-left: 0;
 }
 
 /* TYPOGRAPHY */
 body {
-    font-style: var(--barlow);
+    font-family: var(--font-body);
+    line-height: 3rem;
+    letter-spacing: .2px;
 }
 
-h1,h2,h3,h4 {
-    font-style: var(--offside);
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
     font-size: var(--heading-font-size);
 }
 
@@ -52,6 +60,36 @@ p {
 
 /* LAYOUT */
 .wrapper {
-    max-width: 114rem;
+    max-width: var(--grid-width);
     margin: 0 auto;
 }
+
+.wrapper:not(:last-of-type) {
+    margin-bottom: var(--grid-gutter);
+}
+
+[class^="col-"] {
+    float: left;
+}
+
+[class^="col-"]:not(:last-child) {
+    margin-right: var(--grid-gutter);
+}
+
+.col-1-of-2 {
+    width: calc((100% - var(--grid-width)) / 2);
+}
+
+.col-1-of-3 {
+    width: calc((100% - 2 * var(--grid-gutter)) / 3);
+}
+
+.col-2-of-3 {
+    width: calc((100% - 2 * var(--grid-width)) / 3 + var(--grid-gutter));
+}
+
+.col-1-of-4 {
+    width: calc((100% - 3 * var(--grid-gutter)) / 4);
+}
+
+/* HEADER */
