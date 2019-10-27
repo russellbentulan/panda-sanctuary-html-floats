@@ -21,6 +21,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
     --grid-width: 114rem;
     --grid-gutter: 3rem;
+
+    --gutter-vertical: 4rem;
 }
 
 /* BASE */
@@ -37,6 +39,10 @@ html {
 li {
     list-style: none;
     padding-left: 0;
+}
+
+img {
+    width: 100%;
 }
 
 /* TYPOGRAPHY */
@@ -92,21 +98,23 @@ header {
 }
 
 /* LAYOUT */
+
+/* grid system */
 .wrapper {
     max-width: var(--grid-width);
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .wrapper:not(:last-of-type) {
     margin-bottom: var(--grid-gutter);
 }
 
-[class^="col-"] {
+[class*="col-"] {
     float: left;
 }
 
-[class^="col-"]:last-child {
+[class*="col-"]:last-child {
     margin-right: 0;
 }
 
@@ -126,20 +134,29 @@ header {
     margin-right: var(--grid-gutter);
 }
 
-.col-2-of-3 {
-    width: calc((100% - 2 * var(--grid-gutter)) / 3 + var(--grid-gutter));
+.col-half {
+    width: calc(50%);
 }
 
-.col-1-of-4 {
-    width: calc((100% - 3 * var(--grid-gutter)) / 4);
-}
-
-.col-1-of-4:not(:nth-of-type(4n)) {
-    margin-right: var(--grid-gutter);
-}
-
+/* breaks text on to a new line */
 .new-line {
     display: block;
+}
+
+/* COMPONENTS */
+
+.button {
+    display: inline-block;
+    padding: 2rem;
+    background-color: var(--color-deep-green);
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.button-white {
+    background-color: #fff;
+    color: var(--color-deep-green);
 }
 
 /* HEADER */
@@ -194,4 +211,38 @@ header {
 
 .social-links-item {
     margin-bottom: 1rem;
+}
+
+/* about area */
+.park-about {
+    background-color: var(--color-duck-egg-blue);
+    padding: var(--gutter-vertical);
+}
+
+/* panda gallery section */
+
+.panda-gallery-title {
+    text-align: center;
+}
+
+/* park info section */
+
+.park-info {
+    position: relative;
+}
+
+.park-info-img-container {
+    float: left;
+    max-width: calc((100% - var(--grid-gutter)) / 4);
+    margin-right: var(--grid-gutter);
+}
+
+.park-info-content {
+    float:left;    
+    max-width: calc((100% - var(--grid-gutter)) / 4 * 3);
+}
+
+/* panda info section */
+.panda-info {
+    background-color: var(--color-pine-two);
 }
