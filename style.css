@@ -325,7 +325,7 @@ header {
 }
 
 .panda-info {
-    height: 55rem;
+    height: 45rem;
     position: relative;
 }
 
@@ -337,7 +337,7 @@ header {
 .panda-image-container {
     position: absolute;
     width: 50%;
-    height: 55rem;
+    height: 45rem;
     overflow: hidden;
 }
 
