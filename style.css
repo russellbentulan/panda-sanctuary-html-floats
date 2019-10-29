@@ -47,6 +47,12 @@ img {
     width: 100%;
 }
 
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
 /* TYPOGRAPHY */
 body {
     font-family: var(--font-body);
@@ -201,6 +207,11 @@ a {
     background-color: var(--color-charcoal);
 }
 
+.button:focus {
+    border: 2px solid var(--color-charcoal);
+    box-shadow: 0 0 3px var(--color-duck-egg-blue);
+}
+
 .button-white {
     background-color: #fff;
     color: var(--color-deep-green);
@@ -314,7 +325,7 @@ header {
 }
 
 .panda-info {
-    height: 535px;
+    height: 55rem;
     position: relative;
 }
 
@@ -326,7 +337,7 @@ header {
 .panda-image-container {
     position: absolute;
     width: 50%;
-    height: 535px;
+    height: 55rem;
     overflow: hidden;
 }
 
@@ -403,6 +414,10 @@ header {
     color: var(--color-pine-two);
 }
 
+.park-links-link:focus {
+    box-shadow: 0 0 2px var(--color-charcoal);
+}
+
 /* footer area */
 .footer {
     background-color: var(--color-pine-two);
@@ -416,18 +431,23 @@ header {
 /* footer email subscription form */
 .footer-contact-email,
 .footer-contact-submit {
+    font-size: 1.8rem;
     padding: 1.5rem 3rem;
     float: left;
 }
 .footer-contact-email {
-    width:80%;
+    width: 70%;
 }
 
 .footer-contact-submit {
-    width: 20%;
+    min-width: 30%;
     border: none;
     background-color: var(--color-charcoal);
     color:#FFF;
+}
+
+.footer-contact-submit:focus {
+    box-shadow: 0 0 3px var(--color-duck-egg-blue);
 }
 
 .footer-contact-email:focus {
@@ -465,8 +485,15 @@ header {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 1800px) {
+@media (min-width: 2000px) {
     :root {
-        --base-font-size: 75%;
+        --base-font-size: 100%;
     }
+
+    .panda-info,
+    .panda-image-container {
+        height: 45rem;
+    }
+
+    .panda-image
 }
