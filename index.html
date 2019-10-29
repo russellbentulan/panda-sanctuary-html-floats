@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <header>
+    <header class="header">
       
       <div class="wrapper clearfix header-bar">
 
@@ -97,7 +97,7 @@
 
     </header>
 
-    <main>
+    <main class="main">
 
       <div class="park-about">
 
@@ -131,7 +131,7 @@
               <img src="images/small-box.jpg" alt="A panda in a tree" class="park-info-img"> 
             </div>
 
-            <div class="park-info-content">
+            <article class="park-info-text-wrapper">
 
               <h2 class="park-info-title">More about our park</h2>
 
@@ -141,7 +141,7 @@
 
               <a href="#" class="button">Read more</a>
 
-            </div>
+            </article>
             <!-- .park-info-content -->
 
         </section>
@@ -150,40 +150,116 @@
       </div>
       <!-- .park-about -->
 
-      <section class="panda-info">
+      <section class="panda-top">
 
-        <div class="panda-info-img-container panda-right">
-          <img src="images/right-image.jpg" alt="Bobby the panda giving his sister Bella some affection" class="panda-info-img">
-        </div>
+          <div class="panda-image-wrapper">
+            <img src="images/right-image.jpg" alt="Bobby and Bella learning how to play" class="panda-image">
+          </div>
 
-        <div class="panda-info-content">
+          <div class="wrapper panda-info">
 
-          <h2 class="panda-info-title">Bobby and Bella</h2>
+            <div class="center-vertical">
 
-          <p class="panda-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quae voluptatibus maxime alias saepe enim mollitia eos asperiores culpa dolorem, obcaecati maiores ipsum minus sit animi quos sapiente laborum itaque?Sint ducimus voluptate quidem dolore reprehenderit ad? Maxime fuga architecto optio! Animi corrupti tenetur reiciendis itaque alias quibusdam dolore quaerat doloremque voluptas maiores, velit, recusandae non cupiditate hic iure necessitatibus.</p>
+              <article class="panda-info-text-wrapper">
 
-          <a href="#" class="button button-white">Read more</a>
-
-        </div>
-
-        <div class="panda-info-img-container panda-left">
-          <img src="images/left-image.jpg" alt="Marco chomping on some bamboo leaves" class="panda-info-img">
-        </div>
-
-        <div class="panda-info-content">
-
-          <h2 class="panda-info-title">Look at Marco now</h2>
-
-          <div class="panda-info-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam, voluptates praesentium facere maiores esse, alias molestias laborum vero soluta, placeat facilis quis numquam minima tempora. Reprehenderit nobis qui suscipit.Nihil exercitationem possimus sapiente eaque aliquid quidem! Error sapiente quam soluta minus vel. Magni autem aspernatur eveniet hic! Facilis nisi earum dicta provident sapiente, sed saepe ipsam similique eum omnis!</div>
-
-          <a href="#" class="button button-white">Read more</a>
-
-        </div>
-
+                <h2 class="panda-info-title">Bobby and Bella</h2>
+                
+                <p class="panda-info-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quae voluptatibus maxime alias saepe enim mollitia eos asperiores culpa dolorem, obcaecati maiores ipsum minus sit animi quos sapiente laborum itaque?Sint ducimus voluptate quidem dolore reprehenderit ad? Maxime fuga architecto optio! Animi corrupti tenetur reiciendis itaque alias quibusdam dolore quaerat doloremque voluptas maiores, velit, recusandae non cupiditate hic iure necessitatibus.
+                </p>
+                
+                <a href="#" class="button button-white">Read more</a>
+                
+              </article>
+              <!-- .panda-info-left -->
+            </div>
+            <!-- .center-vertical -->
+          </div>
+          <!-- .panda-info -->
       </section>
-      <!-- .panda-info -->
+      <!-- .panda-top -->
+
+      <section class="panda-bottom">
+
+          <div class="panda-image-wrapper">
+            <img src="images/left-image.jpg" alt="Marco eating on some bamboo leaves" class="panda-image">
+          </div>
+
+          <div class="wrapper panda-info">
+
+            <div class="center-vertical">
+
+              <article class="panda-info-text-wrapper">
+
+                <h2 class="panda-info-title">Look at Marco now</h2>
+
+                <p class="panda-info-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ullam, voluptates praesentium facere maiores esse, alias molestias laborum vero soluta, placeat facilis quis numquam minima tempora. Reprehenderit nobis qui suscipit.Nihil exercitationem possimus sapiente eaque aliquid quidem! Error sapiente quam soluta minus vel. Magni autem aspernatur eveniet hic! Facilis nisi earum dicta provident sapiente, sed saepe ipsam similique eum omnis!
+                </p>
+
+                <a href="#" class="button button-white">Read more</a>
+
+              </article>            
+              <!-- .panda-info-right -->
+            </div>
+            <!-- .center-vertical -->
+          </div>
+          <!-- .panda-info -->
+      </section>
+      <!-- .panda-bottom -->
+
+      <section class="park-links">
+
+        <ul class="park-links-list wrapper clearfix">
+          
+          <li class="park-links-item col-1-of-3">
+            <a href="#" class="park-links-link">
+              <i class="fas fa-gift"></i>
+              <span class="park-links-title new-line">Donations</span>
+            </a>
+          </li>
+
+          <li class="park-links-item col-1-of-3">
+            <a href="#" class="park-links-link">
+              <i class="fas fa-briefcase"></i>
+              <span class="park-links-title new-line">Jobs</span>
+            </a>
+          </li>
+
+          <li class="park-links-item col-1-of-3">
+            <a href="#" class="park-links-link">
+              <i class="fas fa-calendar-check"></i>
+              <span class="park-links-title new-line">Events</span>
+            </a>
+          </li>
+
+        </ul>
+        <!-- .park-links-list -->
+      </section>
+      <!-- .park-links -->
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+
+      <div class="wrapper clearfix">
+
+        <section class="col-1-of-2">
+
+          <form action="submit" class="footer-contact">
+            <h3 class="footer-contact-title">Stay updated</h3>
+            <p class="footer-contact-description" >Subscribe to our newsletter to stay updated.</p>
+
+            <label for="email" class="visually-hidden">Email address</label>
+            <input type="email" name="email" id="email" class="footer-contact-email" placeholder="email address">
+            <input type="submit" value="Subscribe" class="footer-contact-submit">
+          </form>
+          <!-- .footer-contact -->
+        </section>
+
+        <!-- address and footer nav here -->
+
+      </div>
+
+    </footer>
   </body>
 </html>

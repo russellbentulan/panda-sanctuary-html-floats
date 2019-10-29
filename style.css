@@ -20,16 +20,18 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
     --font-heading: 'Offside', cursive;
 
     --grid-width: 114rem;
-    --grid-gutter: 3rem;
+    --grid-gutter: 35px;
 
-    --gutter-vertical: 4rem;
+    --gutter-vertical: 40px;
+    --gutter-vertical-sm: 20px;
+    --gutter-vertical-lg: 80px;
 }
 
 /* BASE */
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red    ; */
+    /* border: 1px solid red; */
 }
 
 html {
@@ -78,7 +80,7 @@ a {
     font-size: 2rem;
 }
 
-header {
+.header {
     color: #FFF;
 }
 
@@ -95,6 +97,11 @@ header {
     font-size: 6.88rem;
     line-height: 6.37rem;
     font-weight: 400;
+}
+
+.park-links-title {
+    font-size: 4.2rem;
+    font-family: var(--font-heading);
 }
 
 /* LAYOUT */
@@ -134,20 +141,31 @@ header {
     margin-right: var(--grid-gutter);
 }
 
-.col-half {
-    width: calc(50%);
-}
+
+/* UTILITIES */
 
 /* breaks text on to a new line */
 .new-line {
     display: block;
 }
 
+/* center elements horizontally */
+.center-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Adds consistent spacing between blocks of text */
+[class$="text-wrapper"] > *:not(:last-child) {
+    margin-bottom: var(--gutter-vertical-sm);
+}
+
 /* COMPONENTS */
 
 .button {
     display: inline-block;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     background-color: var(--color-deep-green);
     color: #FFF;
     text-transform: uppercase;
@@ -206,7 +224,7 @@ header {
 .social-links {
     position: absolute;
     top: 0;
-    right: -10%;
+    right: -4%;
 }
 
 .social-links-item {
@@ -216,7 +234,7 @@ header {
 /* about area */
 .park-about {
     background-color: var(--color-duck-egg-blue);
-    padding: var(--gutter-vertical);
+    padding: var(--gutter-vertical) 0;
 }
 
 /* panda gallery section */
@@ -237,12 +255,96 @@ header {
     margin-right: var(--grid-gutter);
 }
 
-.park-info-content {
+.park-info-text-wrapper {
     float:left;    
     max-width: calc((100% - var(--grid-gutter)) / 4 * 3);
 }
 
 /* panda info section */
-.panda-info {
+.panda-top,
+.panda-bottom {
     background-color: var(--color-pine-two);
+    color: #fff;
+    width: 100%;
+}
+
+.panda-info {
+    height: 535px;
+    position: relative;
+}
+
+.panda-info-text-wrapper {
+    width: calc(50% - var(--grid-gutter));
+    padding: var(--gutter-vertical);
+}
+
+.panda-image-wrapper {
+    position: absolute;
+    width: 50%;
+    height: 535px;
+    overflow: hidden;
+}
+
+.panda-image {
+    position: absolute;
+    width: auto;
+    top: 0;
+    left:0;
+    bottom: 0;
+}
+
+.panda-top .panda-image-wrapper {
+    right: 0;
+}
+
+.panda-top .panda-image {
+    left: 0;
+}
+
+.panda-top .panda-info-text-wrapper {
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.panda-bottom .center-vertical {
+    right: 0;
+}
+
+.panda-bottom .panda-image-wrapper {
+    left: 0;
+}
+
+.panda-bottom .panda-image-wrapper .panda-image {
+    right: 0;
+}
+
+.panda-bottom .panda-info-text-wrapper {
+    margin-left: auto;
+    padding-right: 0;
+}
+
+/* park links section */
+.park-links {
+    background-color: var(--color-duck-egg-blue);
+}
+
+.park-links-item {
+    text-align: center;
+    padding: var(--gutter-vertical-lg);
+}
+
+.park-links-item .fas {
+    color: var(--color-charcoal);
+    font-size: 6.8rem;  
+    margin-bottom: var(--gutter-vertical-sm);
+}
+
+.park-links-title {
+    color: var(--color-deep-green);
+}
+
+/* footer area */
+.footer {
+    background-color: var(--color-pine-two);
+    color: #fff;
 }
