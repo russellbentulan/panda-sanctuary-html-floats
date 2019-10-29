@@ -106,6 +106,11 @@ a {
     font-weight: 400;
 }
 
+.panda-gallery-title,
+.park-info-title {
+    color: var(--color-deep-green);
+}
+
 .park-links-title {
     display: inline-block;
     font-size: 4.2rem;
@@ -274,13 +279,14 @@ header {
 /* about area */
 .park-about {
     background-color: var(--color-duck-egg-blue);
-    padding: var(--gutter-vertical) 0;
+    padding: var(--gutter-vertical-lg) 0;
 }
 
 /* panda gallery section */
 
 .panda-gallery-title {
     text-align: center;
+    margin-bottom: var(--gutter-vertical-lg);
 }
 
 /* park info section */
@@ -289,7 +295,7 @@ header {
     position: relative;
 }
 
-.park-info-img-container {
+.park-info-image-container {
     float: left;
     max-width: calc((100% - var(--grid-gutter)) / 4);
     margin-right: var(--grid-gutter);
@@ -318,7 +324,7 @@ header {
     padding: var(--gutter-vertical);
 }
 
-.panda-image-wrapper {
+.panda-image-container {
     position: absolute;
     width: 50%;
     height: 535px;
@@ -327,12 +333,14 @@ header {
 
 .panda-image {
     position: absolute;
-    width: auto;
+    width: 100%;
     top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.panda-top .panda-image-wrapper {
+.panda-top .panda-image-container {
     right: 0;
 }
 
@@ -349,11 +357,11 @@ header {
     right: 0;
 }
 
-.panda-bottom .panda-image-wrapper {
+.panda-bottom .panda-image-container {
     left: 0;
 }
 
-.panda-bottom .panda-image-wrapper .panda-image {
+.panda-bottom .panda-image-container .panda-image {
     right: 0;
 }
 
