@@ -14,7 +14,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
     --color-pine-two: #213C28;
     --color-duck-egg-blue: #D6F1E4;
 
-    --base-font-size: 1rem;
+    --base-font-size: 62.5%;
 
     --font-body: 'Barlow', sans-serif;
     --font-heading: 'Offside', cursive;
@@ -35,7 +35,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 
 html {
-    font-size: 62.5%;
+    font-size: var(--base-font-size);
 }
 
 li {
@@ -50,7 +50,6 @@ img {
 /* TYPOGRAPHY */
 body {
     font-family: var(--font-body);
-    font-size: var(--base-font-size);
     line-height: 3rem;
     letter-spacing: .2px;
 }
@@ -462,4 +461,12 @@ header {
 .footer-nav-link:hover {
     transition: .2s all;
     right: 4px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1800px) {
+    :root {
+        --base-font-size: 75%;
+    }
 }
