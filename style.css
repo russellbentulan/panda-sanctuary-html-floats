@@ -42,11 +42,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 html {
     font-size: var(--base-font-size);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 li {
@@ -601,7 +604,7 @@ a {
         padding-top: var(--gutter-vertical-lg);
         background-color: var(--color-charcoal);
         box-shadow: 0 2px 5px rgba(0,0,0,.75);
-        transition: .6s right ease-in-out;
+        transition: .5s right ease-in-out;
     }
 
     .main-nav-item {
