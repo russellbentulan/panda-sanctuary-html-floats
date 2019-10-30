@@ -626,6 +626,33 @@ a {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* panda information area */
+
+    .panda-info-section * {
+        position: static;
+        flex: none;
+        width: 100%;
+        transform: translateY(0);
+    }
+
+    .panda-info-section .wrapper {
+        max-width: 90%;
+        padding: var(--gutter-vertical) 0;
+        height: auto;
+    }
+
+    .panda-info .button {
+        display: inline-block;
+        width: auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .panda-info-text-wrapper {
+        padding: 0;
+    }
 }
 
 @media (min-width: 2000px) {
