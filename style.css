@@ -503,6 +503,10 @@ a {
 
 @media (max-width: 800px) {
 
+    :root {
+        --base-font-size: 75%;
+    }
+
     /* header */
     .header {
         background-position: top;
@@ -517,13 +521,15 @@ a {
 
     /* main navigation */
     .nav-container {
-        left: -9999px;
+        right: -150%;
         top: 200%;
-        width: 100%;
+        width: 120%;
         z-index: 99;
         text-align: center;
         padding-top: var(--gutter-vertical-lg);
         background-color: var(--color-charcoal);
+        box-shadow: 0 2px 5px rgba(0,0,0,.75);
+        transition: .6s right ease-in-out;
     }
 
     .main-nav-item {
@@ -542,6 +548,7 @@ a {
 
     .social-links-item {
         display: inline-block;
+        margin: 1.2rem 2.4rem;
     }
 
     .social-links-link {
@@ -554,7 +561,7 @@ a {
         top: 0;
         right: 0;
         font-size: 4.2rem;
-        padding: 3rem;
+        padding-top: 3rem;
         z-index: 999;
     }
 
@@ -579,7 +586,7 @@ a {
     }
 
     .nav-toggle-input:checked ~ .nav-container {
-        left: 0;
+        right: -10%;
     }
 
     .nav-toggle-input:checked ~ .nav-toggle .nav-on, 
@@ -589,6 +596,35 @@ a {
     .nav-toggle-input:checked ~ .nav-toggle .nav-off,
     .nav-toggle:not(:checked) ~ .nav-toggle .nav-on {
         visibility: hidden;
+    }
+
+    /* panda images gallery */
+    .panda-gallery-item.col-1-of-3 {
+        width: calc((100% - var(--grid-gutter)) / 2);
+        margin-right: 0;
+    }
+    
+    .panda-gallery-item.col-1-of-3:first-child {
+        margin-right: var(--grid-gutter);
+    }
+
+    .panda-gallery-item.col-1-of-3:nth-child(3) {
+        width: 100%;
+        margin-top: var(--grid-gutter);
+    }
+
+    .park-info-image-container {
+        display: none;
+    }
+
+    .park-info-text-wrapper {
+        max-width: 100%;
+    }
+
+    .park-info .button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
