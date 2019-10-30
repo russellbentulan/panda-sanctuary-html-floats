@@ -223,7 +223,7 @@ a {
 
 /* HEADER */
 
-header {
+.header {
     background: center / cover no-repeat url('images/header-image.jpg');
     max-height: 3000px;
     height: 80vh;
@@ -501,21 +501,28 @@ header {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 400px) {
-    :root {
-        --base-font-size: 50%;
+@media (max-width: 800px) {
+
+    /* header */
+    .header {
+        background-position: top;
+        max-height: 775px;
+        height: 80vh;
     }
 
-    .new-line {
-        display: run-in;
+    .heading-primary {
+        /* font-size: 6.6rem; */
+        line-height: 1;
     }
 
+    /* main navigation */
     .nav-container {
         left: -9999px;
-        text-align: center;
-        width: 100%;
         top: 200%;
+        width: 100%;
         z-index: 99;
+        text-align: center;
+        padding-top: var(--gutter-vertical-lg);
         background-color: var(--color-charcoal);
     }
 
@@ -551,13 +558,37 @@ header {
         z-index: 999;
     }
 
+    .nav-toggle .nav-on {
+        visibility: hidden;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-toggle:hover {
+        cursor: pointer;
+    }
+
+    .nav-toggle:focus {
+        border: 1px solid #FFF;
+    }
+
     .nav-toggle-input {
         position: absolute;
         top: -999px;
     }
 
-    .nav-toggle-input:checked + .nav-container {
+    .nav-toggle-input:checked ~ .nav-container {
         left: 0;
+    }
+
+    .nav-toggle-input:checked ~ .nav-toggle .nav-on, 
+    .nav-toggle-input:not(:checked) ~ .nav-toggle .nav-off {
+        visibility: visible;
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .nav-off,
+    .nav-toggle:not(:checked) ~ .nav-toggle .nav-on {
+        visibility: hidden;
     }
 }
 
